@@ -1,4 +1,4 @@
-Tic-tac-solution-toe
+activities
 ====================
 
 .. toctree::
