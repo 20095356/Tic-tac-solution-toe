@@ -30,7 +30,7 @@ def print_board():
         print('|'.join(row))
         print('-' * 5)
 
-def is_win(player):
+def is_win(board,player):
     '''Check rows, columns, and diagonals for win condition for a given player.
     A player wins if they have filled an entire row, column, or diagonal with their symbol.
     This function checks all rows, columns, and both diagonals to see if the player has won.
@@ -67,7 +67,7 @@ def main():
             row, col = map(int, input(f"Player {current_player}, enter row and column (0-2) separated by space: ").split())
             if board[row][col] == ' ':
                 board[row][col] = current_player
-                win = is_win(current_player)
+                win = is_win(board,current_player)
                 results.append(win)
                 if win:
                     print_board()
